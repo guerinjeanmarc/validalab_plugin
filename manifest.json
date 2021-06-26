@@ -1,24 +1,18 @@
 {
-  "manifest_version": 2, 
-  "name": "validalab extension", 
-  "description": "Extension Chrome pour validalab", 
-  "version": "1.0", 
-  "permissions": [ 
+  "manifest_version": 2, // Indique la version du manifest (toujours 2)
+  "name": "validalab extension", // Le nom de votre extension
+  "description": "Extension Chrome pour validalab", // La description
+  "version": "1.0", // La version en en l'occurrence la première donc 1.0
+  "permissions": [ // Les permissions, on y reviendra plus bas
+   "http://*/*",
+   "https://*/*",
    "tabs"
   ],
-  "browser_action": {   
-   "default_icon" : "icons/logo_validalab_48.png", 
-   "default_popup": "popup.html" 
+  "browser_action": {   // Les paramètres
+   "default_icon" : "icons/logo_validalab_48.png", // L'icône qui s'affiche en haut à droite de votre navigateur
+   "default_popup": "popup.html" // Le popup qui s'affichera quand vous cliquez sur l'îcone
   },
-  "icons": { 
-    "16" : "icons/logo_validalab_128.png",
-    "48" : "icons/logo_validalab_128.png",
-    "128" : "icons/logo_validalab_128.png" 
-  },
-  "content_script":[
-    {
-      "css":["style.css"],
-      "js": ["app.js"]
-    }
-  ]
+  "icons": { // L'îcone qui s'affichera lorse que vous êtes sur la page extensions des paramètre
+   "128" : "icons/logo_validalab_128.png" // 128 = 128x128 la taille de votre image
+  }
  }

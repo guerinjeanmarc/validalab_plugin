@@ -19,7 +19,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     }
     var div_2 = document.getElementById('put_link_3');
     div_2.innerHTML = "<span>" + result + "</span>";
-    fetch(api_url + "/med/" + result)
+    fetch(api_url + "/med/" + result, {mode: "cors"})
         .then(response => response.json())
         .then(function(response) { 
             news_data = response["w.summary"];
@@ -29,7 +29,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
         
         
-    fetch(api_url + "/med_1/" + result_1)
+    fetch(api_url + "/med_1/" + result_1, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
@@ -43,16 +43,16 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_4.innerHTML += news_data_1;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_2/" + result)
+    fetch( api_url + "/med_2/" + result)
         .then(response => response.json())
 
         .then(function(response) { 
             var news_data_2 = '';
             for (let i = 0; i < response.length; i++) {
                 if(i<response.length-1){
-                    news_data_2 += response[i]["e.name"] + ' <span>&#8592;</span> '  ;
+                    news_data_2 +=  response[i]["e.name"] +  ' <span>&#8592;</span> '  ;
                 }else{
-                    news_data_2 += response[i]["e.name"]   ; 
+                    news_data_2 += response[i]["e.name"] ; 
                     }
                 }
 
@@ -62,7 +62,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
         
-    fetch(api_url + "/med_3/" + result)
+    fetch(api_url + "/med_3/" + result, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
@@ -88,7 +88,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
     
-    fetch(api_url + "/med_4/" + result)
+    fetch(api_url + "/med_4/" + result, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
@@ -114,7 +114,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_9.innerHTML += news_data_6.replace("|", "");
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_5/" + result)
+    fetch(api_url + "/med_5/" + result, {mode: "no-cors"})
             .then(response => response.json())
     
             .then(function(response) { 
@@ -135,7 +135,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 div_10.innerHTML += news_data_5;
             })
                 .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_6/" + result_1)
+    fetch(api_url + "/med_6/" + result_1, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
@@ -157,7 +157,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_11.innerHTML += news_data_5;
     })
         .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_7/" + result_1)
+    fetch(api_url + "/med_7/" + result_1, {mode: "no-cors"})
         .then(response => response.json())
     
         .then(function(response) { 
@@ -178,7 +178,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_11.innerHTML += news_data_5;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_8/" + result_1)
+    fetch(api_url + "/med_8/" + result_1, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
@@ -191,7 +191,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 var l_1 = response.length
                 if (l_1>5){
                     for (let i = 0; i < 5; i++) {
-                        news_data_5 += "<span class='badge badge-primary'>" + response[i]["w2.name"] + "</span>" 
+                        news_data_5 += "<span class='badge badge-primary friends-badge'>" + response[i]["w2.name"] + "</span>" 
                         }
                 }else{
                     for (let i = 0; i < l_1; i++) {
@@ -208,7 +208,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             div_11.innerHTML +=   news_data_5 ;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-    fetch(api_url + "/med_9/" + result_1)
+    fetch(api_url + "/med_9/" + result_1, {mode: "no-cors"})
         .then(response => response.json())
 
         .then(function(response) { 
