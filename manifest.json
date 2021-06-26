@@ -4,8 +4,7 @@
   "description": "Extension Chrome pour validalab", 
   "version": "1.0", 
   "permissions": [ 
-
-   "activetabs"
+   "tabs"
   ],
   "browser_action": {   
    "default_icon" : "icons/logo_validalab_48.png", 

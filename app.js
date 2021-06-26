@@ -12,6 +12,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     if(sit.length ===3){
         result=sit[1] + '.' + sit[2];
         result_1 = sit[1] + '.' + sit[2]
+
     }else{
         result=site
         result_1 = site
@@ -34,7 +35,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         .then(function(response) { 
             var news_data_1 = ''
             for (let i = 0; i < response.length; i++) {
-                news_data_1 += response[i]["e2.name"] + ' - ' 
+                news_data_1 += "<span class='badge badge-info friends-badge'>" + response[i]["e2.name"] + "</span>" 
                 }
 
             
@@ -96,14 +97,16 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 news_data_5 = "";
             }else{
                 var vis = Math.round(response[0]["gV"] / 1000000) + ' M';
-                news_data_5 = "<span style='font-style: italic; font-weight: bold;'>" + response[0]['gR'] + " ieme " + "</span>" + ": site grand public de France   ,   " + vis +" visites/mois";
+                news_data_5 = "<span style='font-style: italic; font-weight: bold;'>" + response[0]['gR'] + " ieme " + "</span>" + ": site grand public de France" 
+                              +"<br>"+"<span style='font-style: italic; font-weight: bold;'>" +  vis + "</span>" +" visites/mois";
             }
             if (response[0]["pR"] == null){
                 news_data_6 = "" ;
             }else{
                 var vis = Math.round(response[0]["pV"] / 1000000) + ' M';
                 news_data_6 = "<span style='font-style: italic; font-weight: bold;'>" +
-                              response[0]["pR"] + "ieme" + "</span>" + " :site pro de France     ,  " + vis +" visites/mois";
+                              response[0]["pR"] + "ieme" + "</span>" + " :site pro de France" 
+                              +"<br>"+"<span style='font-style: italic; font-weight: bold;'>" +  vis + "</span>" +" visites/mois";   
             }
             var div_8 = document.getElementById("put_link_8");
             var div_9 = document.getElementById("put_link_9");
@@ -133,25 +136,25 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             })
                 .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
     fetch(api_url + "/med_6/" + result_1)
-    .then(response => response.json())
+        .then(response => response.json())
 
-    .then(function(response) { 
-        var news_data_5 = '';
-        // alert(JSON.stringify(response));
-        if (response[0] == null){
-            news_data_5 = "";
-        }else{
-            var vis = Math.round(response[0]["yt.pro_subscriberCount"] / 1000) + ' K';
-            var alink = document.createElement("a");
-            alink.href = response[0]["yt.url"];
-            alink.text = "@" + response[0]["yt.user_name"];
-            alink.target = "_blank"
-            news_data_5 = " - " + vis +"  Subscribers";
-            document.getElementById('where_to_insert_1').appendChild(alink);
-        }
-        
-        var div_11 = document.getElementById("element5");
-        div_11.innerHTML += news_data_5;
+        .then(function(response) { 
+            var news_data_5 = '';
+            // alert(JSON.stringify(response));
+            if (response[0] == null){
+                news_data_5 = "";
+            }else{
+                var vis = Math.round(response[0]["yt.pro_subscriberCount"] / 1000) + ' K';
+                var alink = document.createElement("a");
+                alink.href = response[0]["yt.url"];
+                alink.text = "@" + response[0]["yt.user_name"];
+                alink.target = "_blank"
+                news_data_5 = " - " + vis +"  Subscribers";
+                document.getElementById('where_to_insert_1').appendChild(alink);
+            }
+            
+            var div_11 = document.getElementById("element5");
+            div_11.innerHTML += news_data_5;
     })
         .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
     fetch(api_url + "/med_7/" + result_1)
@@ -188,11 +191,11 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 var l_1 = response.length
                 if (l_1>5){
                     for (let i = 0; i < 5; i++) {
-                        news_data_5 += response[i]["w2.name"] + ' - ' 
+                        news_data_5 += "<span class='badge badge-primary'>" + response[i]["w2.name"] + "</span>" 
                         }
                 }else{
                     for (let i = 0; i < l_1; i++) {
-                        news_data_5 += response[i]["w2.name"] + " - " 
+                        news_data_5 += "<span class='badge badge-info friends-badge'>" + response[i]["w2.name"] + "</span>" 
                         }
                 }
                 // news_data_5 = response[0]["w2.name"] 
@@ -202,10 +205,10 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             }
             
             var div_11 = document.getElementById("put_link_11");
-            div_11.innerHTML +=  "<span style='color: blue; font-size: smaller;'>" + news_data_5 + "</span>";
+            div_11.innerHTML +=   news_data_5 ;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
-        fetch(api_url + "/med_9/" + result_1)
+    fetch(api_url + "/med_9/" + result_1)
         .then(response => response.json())
 
         .then(function(response) { 
@@ -217,7 +220,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
             }else{
                 var l_1 = response.length
                     for (let i = 0; i < l_1; i++) {
-                        news_data_5 += response[i]["r.name"] + ' - ' 
+                        news_data_5 += "<span class='badge badge-info friends-badge'>" + response[i]["r.name"] + "</span> "
                         }
                 
                 }
@@ -226,8 +229,8 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                             //   response[3]["w2.name"] + response[4]["w2.name"] + response[5]["w2.name"]
             
             var div_11 = document.getElementById("put_link_12");
-            div_11.innerHTML += "<span style='background-color:orange; font-size: smaller;'>" +  result_1 + " est recommande par: " + "</span>" + "<br>" +  
-                                "<span style='color: blue; font-size: smaller;'>" + news_data_5 + "</span>";
+            div_11.innerHTML += "<span style='background-color:orange; font-size: smaller;'>" +  result_1 + " est recommande par: " + "</span>" + "<br>"  
+                                + news_data_5 ;
         })
             .catch(error => alert("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));
 

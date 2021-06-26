@@ -28,3 +28,33 @@ word-wrap: break-word;
 #element6 {margin:5px;}
 #put_link {display:inline-block; background-color:orange; border: solid;height:37px;}
 #element3 {margin-right:10px; width:70px; background-color:blue; text-align:center} 
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    margin: 2px;
+    border-radius: 10px;
+  }
+.badge_1 {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    color: blue;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    margin: 2px;
+    border-radius: 10px;
+  }
