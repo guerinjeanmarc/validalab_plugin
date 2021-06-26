@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2, 
+  "name": "validalab extension", 
+  "description": "Extension Chrome pour validalab", 
+  "version": "1.0", 
+  "permissions": [ 
+   "tabs"
+  ],
+  "browser_action": {   
+   "default_icon" : "icons/logo_validalab_48.png", 
+   "default_popup": "popup.html" 
+  },
+  "icons": { 
+    "16" : "icons/logo_validalab_128.png",
+    "48" : "icons/logo_validalab_128.png",
+    "128" : "icons/logo_validalab_128.png" 
+  },
+  "content_script":[
+    {
+      "css":["style.css"],
+      "js": ["app.js"]
+    }
+  ]
+ }

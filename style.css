@@ -1,0 +1,60 @@
+h1, h6{
+    text-align:center
+}
+body{
+    width: 380px;
+    height:450px;
+    background-color: honeydew;
+}
+.limit{
+word-wrap: break-word;
+}   
+#put_link_12 {border: solid;}
+#put_link_11 {border: solid;}
+#put_link_2 {border: solid;font-size: smaller;}
+#put_link_4 {border: solid;font-size: smaller;}
+#put_link_5 {border: solid;font-size: smaller;}
+#put_link_6 {border: solid;font-size: smaller;}
+#put_link_7 {border: solid;font-size: smaller;}
+#put_link_8 {border: solid;}
+#put_link_9 {border: solid;}
+#put_link_10 {border: solid;}
+#put_1 {background-color:blue;}
+#put_2 {background-color:red;}
+#element1 {display:inline-block;margin-right:10px;} 
+#element2 {display:inline-block;margin-right:10px;} 
+#element4 {margin:5px;}
+#element5 {margin:5px;}
+#element6 {margin:5px;}
+#put_link {display:inline-block; background-color:orange; border: solid;height:37px;}
+#element3 {margin-right:10px; width:70px; background-color:blue; text-align:center} 
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    margin: 2px;
+    border-radius: 10px;
+  }
+.badge_1 {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    color: blue;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    margin: 2px;
+    border-radius: 10px;
+  }
