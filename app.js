@@ -395,21 +395,21 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                     for (let i = 0; i < positive_length; i++) {
                         news_data_5 += "<tr><td> <span class='badge badge-reco friends-badge'>"+positive_reco[i]['recommender']+"</span> </td>"+
                         "<td><span class='badge badge-reco friends-badge'>"+positive_reco[i]['meaning'] +" </span> </td>"+
-                        "<td><span class='badge badge-reco friends-badge'><a href='"+positive_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
+                        "<td><span class='badge badge-reco friends-badge'><a target='_blank' href='"+positive_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
                         "</tr>"
                         
                         }
                     for (let i = 0; i < negative_length; i++) {
                         news_data_6 += "<tr><td> <span class='badge badge-negative friends-badge'>"+negative_reco[i]['recommender']+"</span> </td>"+
                         "<td><span class='badge badge-negative friends-badge'>"+negative_reco[i]['meaning'] +" </span> </td>"+
-                        "<td><span class='badge badge-negative friends-badge'><a href='"+negative_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
+                        "<td><span class='badge badge-negative friends-badge'><a target='_blank'  href='"+negative_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
                         "</tr>"
                         
                         }
                     for (let i = 0; i < posneg_length; i++) {
                             news_data_7 += "<tr><td> <span class='badge badge-snegative friends-badge'>"+posneg_reco[i]['recommender']+"</span> </td>"+
                             "<td><span class='badge badge-snegative friends-badge'>"+posneg_reco[i]['meaning'] +" </span> </td>"+
-                            "<td><span class='badge badge-snegative friends-badge'><a href='"+posneg_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
+                            "<td><span class='badge badge-snegative friends-badge'><a target='_blank'  href='"+posneg_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
                             "</tr>"
                             
                             }
