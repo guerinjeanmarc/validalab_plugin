@@ -1,4 +1,4 @@
-# Mode d'emplois Extension non publié
+# Validalab - Mode d'emplois d'installation de la version beta de l'extension chrome :
 
 1-Allez sur le navigateur Chrome et se mettre en mode devellopeur
 
