@@ -1,4 +1,4 @@
-body { margin:0px;top:50px;margin-right:0px;bottom:0;margin-left:0px;background-color: #eef0ed; }
+body { margin:0px;top:50px;margin-right:0px;bottom:0;margin-left:0px;background-color: #eef0ed; width: 500px !important;}
 .sidebar {
       width: 300px;
     }
