@@ -1,6 +1,6 @@
-# Validalab - Mode d'emplois d'installation de la version beta de l'extension chrome :
+# Validalab - installation de la version beta de l'extension chrome :
 
-1-Allez sur le navigateur Chrome et se mettre en mode devellopeur
+1-Allez sur le navigateur Chrome et se mettre en mode developeur
 
 2-Clonez le projet(git clone https://github.com/dataforgoodfr/batch9_validalab_relationviz/edit/extension_chrome)
 
