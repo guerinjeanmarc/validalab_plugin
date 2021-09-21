@@ -2,7 +2,7 @@
   "manifest_version": 2, // Indique la version du manifest (toujours 2)
   "name": "validalab extension", // Le nom de votre extension
   "description": "Extension Chrome pour validalab", // La description
-  "version": "1.0", // La version en en l'occurrence la première donc 1.0
+  "version": "0.1", // La version en en l'occurrence la première alpha donc 0.1
   "permissions": [ // Les permissions, on y reviendra plus bas
    "http://*/*",
    "https://*/*",
